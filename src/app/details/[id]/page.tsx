@@ -41,7 +41,7 @@ export default async function MovieDetailsPage({
           <div className='col-span-3 rounded bg-slate-950 bg-opacity-70 text-white p-8 flex flex-col gap-3'>
             <h2 className='text-2xl font-semibold'>{data.title}</h2>
             <div className='flex items-center gap-5 my-1'>
-              <div className='rounded-full w-12 h-12 ring ring-primary grid place-content-center font-extrabold'>
+              <div className='rounded-full w-12 h-12 ring ring-blue-600 grid place-content-center font-extrabold'>
                 {data.vote_average.toFixed(1)}
               </div>
               <div className='flex items-center gap-3 flex-wrap'>

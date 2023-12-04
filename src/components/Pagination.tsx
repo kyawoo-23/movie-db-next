@@ -40,11 +40,11 @@ const Pagination = (props: PaginationProps) => {
         pageCount={Math.min(props.totalPage, 500)}
         previousLabel={<BiSolidLeftArrow className='mx-2' />}
         renderOnZeroPageCount={null}
-        className='flex items-center font-semibold text-sm my-2 bg-violet-300 rounded-full w-fit px-6 py-3'
+        className='flex items-center font-semibold text-sm my-2 bg-blue-200 rounded-full w-fit px-6 py-3'
         pageClassName='mx-2 rounded ring-1 ring-black'
         pageLinkClassName='text-[#393939] text-xs w-6 h-6 grid place-content-center'
         activeClassName='ring-primary'
-        activeLinkClassName='rounded text-white bg-violet-800'
+        activeLinkClassName='rounded text-white bg-blue-600'
         disabledClassName='text-slate-500'
       />
     </div>
