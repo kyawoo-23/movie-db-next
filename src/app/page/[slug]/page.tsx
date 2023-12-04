@@ -3,15 +3,19 @@ import MovieCard from "@/components/MovieCard";
 import Pagination from "@/components/Pagination";
 import { DiscoverAPI } from "@/lib/axios/discoverAPI";
 
-export default async function Home() {
-  const { data } = await DiscoverAPI.GetAll(1);
+export default async function HomePaginatePage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const { data } = await DiscoverAPI.GetAll(parseInt(params.slug));
 
   return (
     <>
       <Pagination
         totalPage={data.total_pages}
         type='DISCOVER'
-        currentPage={1}
+        currentPage={parseInt(params.slug)}
       />
       <GridContainer>
         {data.results.map((d) => (
