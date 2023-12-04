@@ -1,12 +1,10 @@
 "use client";
-import { tailChase } from "ldrs";
-
-tailChase.register();
+import { SyncLoader } from "react-spinners";
 
 export default function Loading() {
   return (
-    <div className='w-full h-[80vh] grid place-content-center'>
-      <l-tail-chase size='40' speed='1.75' color='white'></l-tail-chase>;
+    <div className='w-full h-[80vh] flex justify-center items-center'>
+      <SyncLoader color='white' />
     </div>
   );
 }
