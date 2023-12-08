@@ -2,6 +2,7 @@ import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 import PlaceHolderImg from "@/assets/Placeholder.png";
 import Image from "next/image";
 import Link from "next/link";
+import { rgbDataURL } from "@/utils/shared";
 
 interface MovieCardProps {
   title: string;
@@ -56,6 +57,8 @@ function MovieCard({ id, imgPath, rating, title }: MovieCardProps) {
           alt={title}
           height={360}
           width={240}
+          placeholder='blur'
+          blurDataURL={rgbDataURL(0, 0, 0)}
         />
       </div>
       <div className='px-5 py-3'>

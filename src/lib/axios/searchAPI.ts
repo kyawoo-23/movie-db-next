@@ -1,5 +1,5 @@
 import { MovieAPI } from "@/lib/axios/config";
-import { MoviesResponse } from "@/types";
+import { MoviesResponse } from "@/utils/types";
 
 export const SearchAPI = {
   SearchQuery: async function (page: number, query: string) {

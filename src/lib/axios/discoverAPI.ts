@@ -1,5 +1,5 @@
 import { MovieAPI } from "@/lib/axios/config";
-import { MoviesResponse } from "@/types";
+import { MoviesResponse } from "@/utils/types";
 
 export const DiscoverAPI = {
   GetAll: async function (page: number) {

@@ -1,5 +1,5 @@
 import { MovieAPI } from "@/lib/axios/config";
-import { MovieDetailsResponse } from "@/types";
+import { MovieDetailsResponse } from "@/utils/types";
 
 export const DetailsAPI = {
   GetDetails: async function (movie_id: number) {

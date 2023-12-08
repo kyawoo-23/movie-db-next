@@ -2,6 +2,7 @@ import { DetailsAPI } from "@/lib/axios/detailsAPI";
 import Image from "next/image";
 import PlaceHolderImage from "@/assets/Placeholder.png";
 import Pill from "@/components/Pill";
+import { rgbDataURL } from "@/utils/shared";
 
 export default async function MovieDetailsPage({
   params,
@@ -23,6 +24,8 @@ export default async function MovieDetailsPage({
           alt={data.title}
           width={1280}
           height={600}
+          placeholder='blur'
+          blurDataURL={rgbDataURL(0, 0, 0)}
         />
         <div className='grid grid-cols-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-10 gap-10'>
           <div className='col-span-1'>
@@ -36,6 +39,9 @@ export default async function MovieDetailsPage({
               alt={data.title}
               width={300}
               height={400}
+              placeholder='blur'
+              blurDataURL={rgbDataURL(0, 0, 0)}
+              priority
             />
           </div>
           <div className='col-span-3 rounded bg-slate-950 bg-opacity-70 text-white p-8 flex flex-col gap-3'>
