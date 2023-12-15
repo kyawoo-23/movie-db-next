@@ -8,7 +8,7 @@ function Navbar() {
   let debounceTimer: ReturnType<typeof setTimeout>;
   const handleSearchQuery = (e: React.ChangeEvent<HTMLInputElement>) => {
     clearTimeout(debounceTimer);
-    const searchTerm = e.target.value;
+    const searchTerm = e.target.value.trim();
     debounceTimer = setTimeout(() => {
       searchTerm ? router.push(`/search/${searchTerm}`) : router.push("/");
     }, 1200);
